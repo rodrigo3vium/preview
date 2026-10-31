@@ -1,126 +1,637 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="utf-8">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="robots" content="noindex">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>DentStar Clínica Odontológica — Campo Grande MS</title>
-<meta name="description" content="DentStar Clínica Odontológica em Campo Grande-MS">
+<title>DentStar Clínica Odontológica · Dentista no Tiradentes, Campo Grande - MS</title>
+<meta name="description" content="DentStar Clínica Odontológica — dentista no bairro Tiradentes, Campo Grande - MS. Nota 5,0 no Google com 154 avaliações. Agende pelo WhatsApp.">
+<meta name="theme-color" content="#0F766E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
 <style>
-:root {
-  --accent: #0d9488;
-  --accent2: #115e59;
-  --bg: #0b0f14;
-  --card: #121821;
-  --text: #f3f6fb;
-  --muted: #9aa7b8;
-  --line: #243041;
-}
-* { box-sizing: border-box; }
-html, body { margin:0; padding:0; font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif; background: var(--bg); color: var(--text); }
-a { color: inherit; }
-.wrap { max-width: 960px; margin: 0 auto; padding: 0 1.1rem; }
-.badge { display:inline-flex; gap:.4rem; align-items:center; background: rgba(255,255,255,.08); border:1px solid var(--line); padding:.35rem .7rem; border-radius:999px; font-size:.8rem; color:var(--muted); }
-.hero { padding: 2rem 0 1.5rem; }
-.hero-grid { display:grid; gap:1.25rem; }
-@media(min-width:800px){ .hero-grid { grid-template-columns: 1.1fr .9fr; align-items:center; } }
-h1 { font-size: clamp(1.6rem, 4vw, 2.4rem); line-height:1.15; margin:.6rem 0; }
-.lead { color: var(--muted); font-size:1.05rem; margin:0 0 1rem; }
-.rating { color:#fbbf24; margin: .4rem 0 1rem; font-size:.95rem; }
-.rating strong { color: var(--text); }
-.cta { display:inline-flex; align-items:center; gap:.55rem; background: linear-gradient(135deg, var(--accent), var(--accent2)); color:#fff; text-decoration:none; font-weight:700; padding:.9rem 1.2rem; border-radius:14px; box-shadow: 0 10px 30px rgba(0,0,0,.35); }
-.cta.secondary { background: transparent; border:1px solid var(--line); font-weight:600; box-shadow:none; }
-.cta-row { display:flex; flex-wrap:wrap; gap:.7rem; }
-.photo { border-radius: 18px; overflow:hidden; border:1px solid var(--line); background: var(--card); min-height: 240px; }
-.photo img { width:100%; height:100%; object-fit:cover; display:block; min-height:240px; max-height:360px; }
-.img-ph { min-height:240px; background: linear-gradient(135deg, var(--accent2), #111); }
-.photo-cap { font-size:.75rem; color:var(--muted); padding:.55rem .8rem; border-top:1px solid var(--line); }
-.section { padding: 1.6rem 0; }
-.card { background: var(--card); border:1px solid var(--line); border-radius:18px; padding:1.2rem; }
-.grid2 { display:grid; gap:1rem; }
-@media(min-width:700px){ .grid2 { grid-template-columns: 1fr 1fr; } }
-h2 { font-size:1.2rem; margin:0 0 .8rem; }
-ul.services { list-style:none; padding:0; margin:0; display:grid; gap:.55rem; }
-ul.services li { padding:.7rem .85rem; border:1px solid var(--line); border-radius:12px; background:#0e141c; }
-ul.services li::before { content:"✓ "; color: var(--accent); font-weight:700; }
-.hours { list-style:none; padding:0; margin:0; }
-.hours li { display:flex; justify-content:space-between; gap:1rem; padding:.45rem 0; border-bottom:1px solid var(--line); color:var(--muted); }
-.hours li span:first-child { color:var(--text); }
-.muted { color: var(--muted); }
-.map { border-radius:18px; overflow:hidden; border:1px solid var(--line); min-height:260px; }
-.map iframe { border:0; width:100%; height:280px; display:block; }
-.footer { padding: 2rem 0 3.5rem; color: var(--muted); font-size:.85rem; }
-.note { font-size:.75rem; color:#7b8796; margin-top:1rem; line-height:1.4; }
-.float-wa { position:fixed; right:1rem; bottom:1rem; z-index:20; }
-.float-wa a { display:flex; align-items:center; gap:.5rem; background:#25D366; color:#06240f; font-weight:800; text-decoration:none; padding:.85rem 1rem; border-radius:999px; box-shadow:0 12px 28px rgba(0,0,0,.4); }
+  :root{
+    --c900:#1f2326; --c800:#2b3034; --c700:#4a5157; --c500:#6b7378; --c400:#9aa1a6;
+    --g50:#f8faf9; --g100:#eef1f0; --g200:#e3e8e6;
+    --t50:#f0f7f5; --t100:#dcede9; --t200:#b9dbd3; --t500:#14857b; --t600:#0F766E; --t700:#0b5f59; --t800:#0a4b47;
+    --wa:#16a34a; --wa-h:#15803d;
+    --gold:#e8b931;
+    --radius:16px;
+    --shadow-sm:0 1px 2px rgba(31,35,38,.04),0 2px 8px rgba(31,35,38,.04);
+    --shadow:0 2px 4px rgba(31,35,38,.03),0 12px 32px -8px rgba(31,35,38,.10);
+    --shadow-lg:0 4px 8px rgba(31,35,38,.04),0 28px 60px -16px rgba(15,118,110,.22);
+    --serif:"Playfair Display",Georgia,"Times New Roman",serif;
+    --sans:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+    --ease:cubic-bezier(.22,.61,.36,1);
+  }
+  *,*::before,*::after{box-sizing:border-box}
+  [hidden]{display:none!important}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+  body{margin:0;font-family:var(--sans);color:var(--c900);background:#fff;font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-rendering:optimizeLegibility}
+  img{max-width:100%;display:block}
+  a{color:inherit;text-decoration:none}
+  h1,h2,h3{font-family:var(--serif);font-weight:500;letter-spacing:-.015em;line-height:1.12;margin:0;color:var(--c900)}
+  p{margin:0}
+  :focus-visible{outline:2px solid var(--t600);outline-offset:3px;border-radius:6px}
+  .container{width:100%;max-width:1200px;margin:0 auto;padding:0 24px}
+  @media(min-width:768px){.container{padding:0 40px}}
+  .section{padding:80px 0;scroll-margin-top:72px}
+  @media(min-width:1024px){.section{padding:128px 0}}
+  .eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--t600)}
+  .eyebrow::before{content:"";width:24px;height:1px;background:currentColor;opacity:.6}
+  .h2{font-size:clamp(32px,4.6vw,48px);margin-top:16px}
+  .h2 em{font-style:italic;color:var(--t600);font-weight:400}
+  .lead{font-size:17px;color:var(--c700);line-height:1.75;max-width:560px}
+  @media(min-width:1024px){.lead{font-size:18px}}
+  .icon{width:20px;height:20px;flex:none}
+
+  /* Buttons */
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:52px;padding:0 26px;border-radius:999px;font-family:var(--sans);font-size:15px;font-weight:500;letter-spacing:.005em;border:1px solid transparent;cursor:pointer;transition:transform .25s var(--ease),background-color .25s var(--ease),box-shadow .25s var(--ease),border-color .25s var(--ease),color .25s var(--ease);white-space:nowrap}
+  .btn:hover{transform:translateY(-2px)}
+  .btn:active{transform:translateY(0)}
+  .btn-wa{background:var(--wa);color:#fff;box-shadow:0 8px 24px -8px rgba(22,163,74,.55)}
+  .btn-wa:hover{background:var(--wa-h);box-shadow:0 14px 30px -10px rgba(22,163,74,.6)}
+  .btn-ghost{background:rgba(255,255,255,.7);color:var(--c900);border-color:var(--g200);backdrop-filter:blur(6px)}
+  .btn-ghost:hover{border-color:var(--t200);color:var(--t700);background:#fff}
+  .btn-lg{height:60px;padding:0 34px;font-size:16px}
+
+  /* Header */
+  .header{position:fixed;inset:0 0 auto 0;z-index:50;transition:background-color .35s var(--ease),box-shadow .35s var(--ease),backdrop-filter .35s}
+  .header.scrolled{background:rgba(255,255,255,.86);backdrop-filter:saturate(1.6) blur(14px);-webkit-backdrop-filter:saturate(1.6) blur(14px);box-shadow:0 1px 0 rgba(31,35,38,.06)}
+  .header .container{display:flex;align-items:center;justify-content:space-between;height:76px;transition:height .35s var(--ease)}
+  .header.scrolled .container{height:66px}
+  .brand{display:flex;flex-direction:column;line-height:1.1}
+  .brand-name{font-family:var(--serif);font-size:23px;font-weight:600;letter-spacing:-.01em;color:var(--c900)}
+  .brand-name span{color:var(--t600)}
+  .brand-sub{font-size:12px;color:var(--c500);letter-spacing:.04em;margin-top:3px}
+  .nav{display:none;align-items:center;gap:36px}
+  .nav a.link{font-size:14.5px;font-weight:500;color:var(--c700);position:relative;padding:6px 0;transition:color .2s}
+  .nav a.link::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:var(--t600);transform:scaleX(0);transform-origin:left;transition:transform .3s var(--ease)}
+  .nav a.link:hover{color:var(--t700)}
+  .nav a.link:hover::after{transform:scaleX(1)}
+  .nav .btn{height:42px;padding:0 20px;font-size:14px}
+  @media(min-width:960px){.nav{display:flex}}
+  .menu-btn{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border:0;background:transparent;color:var(--c900);cursor:pointer;border-radius:10px;margin-right:-10px}
+  @media(min-width:960px){.menu-btn{display:none}}
+  .mobile-nav{position:fixed;inset:66px 0 auto 0;background:rgba(255,255,255,.98);backdrop-filter:blur(14px);padding:12px 24px 28px;box-shadow:0 20px 40px -20px rgba(31,35,38,.2);transform:translateY(-8px);opacity:0;pointer-events:none;transition:opacity .25s var(--ease),transform .25s var(--ease);z-index:49}
+  .mobile-nav.open{opacity:1;transform:none;pointer-events:auto}
+  .mobile-nav a.link{display:block;padding:15px 0;font-size:17px;font-family:var(--serif);border-bottom:1px solid var(--g100);color:var(--c900)}
+  .mobile-nav .btn{width:100%;margin-top:20px}
+
+  /* Hero */
+  .hero{position:relative;min-height:100vh;min-height:100svh;display:flex;align-items:center;padding:120px 0 72px;background:linear-gradient(135deg,#fff 0%,var(--g50) 48%,var(--t50) 100%);overflow:hidden}
+  .hero::before,.hero::after{content:"";position:absolute;border-radius:50%;pointer-events:none}
+  .hero::before{width:620px;height:620px;right:-180px;top:-160px;background:radial-gradient(circle,rgba(15,118,110,.10),rgba(15,118,110,0) 65%)}
+  .hero::after{width:520px;height:520px;left:-220px;bottom:-220px;background:radial-gradient(circle,rgba(15,118,110,.07),rgba(15,118,110,0) 65%)}
+  .hero-grid{position:relative;z-index:1;display:grid;gap:56px;align-items:center}
+  @media(min-width:1024px){.hero-grid{grid-template-columns:1.08fr .92fr;gap:72px}}
+  .rating-pill{display:inline-flex;align-items:center;gap:10px;padding:8px 16px 8px 10px;background:#fff;border:1px solid var(--g100);border-radius:999px;box-shadow:var(--shadow-sm);font-size:13.5px;color:var(--c700);transition:border-color .2s,box-shadow .2s}
+  .rating-pill:hover{border-color:var(--t200);box-shadow:var(--shadow)}
+  .rating-pill .g{width:24px;height:24px;border-radius:50%;background:var(--g50);display:grid;place-items:center}
+  .stars{display:inline-flex;gap:1px;color:var(--gold)}
+  .stars svg{width:14px;height:14px}
+  .rating-pill strong{color:var(--c900);font-weight:600}
+  .hero h1{font-size:clamp(40px,5.6vw,64px);margin-top:28px;line-height:1.1}
+  .hero h1 em{font-style:italic;font-weight:400;color:var(--t600)}
+  .hero .lead{margin-top:24px}
+  .hero-ctas{display:flex;flex-wrap:wrap;gap:14px;margin-top:40px}
+  .hero-meta{display:flex;flex-wrap:wrap;gap:10px 24px;margin-top:40px;padding-top:28px;border-top:1px solid var(--g200);font-size:14px;color:var(--c500)}
+  .hero-meta span{display:inline-flex;align-items:center;gap:8px}
+  .hero-meta .icon{width:17px;height:17px;color:var(--t600)}
+  @media(max-width:520px){
+    .hero-ctas .btn{width:100%}
+  }
+  .hero-visual{position:relative;max-width:480px;width:100%;margin:0 auto}
+  .photo-frame{position:relative;aspect-ratio:4/5;border-radius:28px;overflow:hidden;background:linear-gradient(160deg,var(--t100),var(--t50));box-shadow:var(--shadow-lg)}
+  .photo-frame img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s var(--ease)}
+  .hero-visual:hover .photo-frame img{transform:scale(1.03)}
+  .photo-frame::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 60%,rgba(10,75,71,.28));pointer-events:none}
+  .photo-accent{position:absolute;inset:auto -18px -18px auto;width:62%;height:62%;border-radius:28px;border:1px solid var(--t200);z-index:-1}
+  .float-card{position:absolute;background:rgba(255,255,255,.95);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.8);border-radius:18px;box-shadow:var(--shadow);padding:16px 18px}
+  .float-rating{left:-14px;bottom:28px;display:flex;align-items:center;gap:14px}
+  .float-rating .num{font-family:var(--serif);font-size:38px;font-weight:600;line-height:1;color:var(--c900)}
+  .float-rating small{display:block;font-size:12.5px;color:var(--c500);margin-top:4px}
+  .float-status{right:-10px;top:26px;display:flex;align-items:center;gap:10px;font-size:13px;font-weight:500;color:var(--c800);padding:12px 16px}
+  .dot{width:9px;height:9px;border-radius:50%;background:var(--c400);position:relative;flex:none}
+  .dot.on{background:#22c55e}
+  .dot.on::after{content:"";position:absolute;inset:-4px;border-radius:50%;background:rgba(34,197,94,.35);animation:pulse 2s infinite}
+  @keyframes pulse{0%{transform:scale(.6);opacity:1}100%{transform:scale(1.8);opacity:0}}
+  @media(min-width:1024px){.float-rating{left:-44px}.float-status{right:-28px}}
+  .scroll-cue{position:absolute;left:50%;bottom:26px;transform:translateX(-50%);color:var(--c400);z-index:1;display:none;animation:bob 2.4s ease-in-out infinite}
+  @media(min-width:1024px) and (min-height:760px){.scroll-cue{display:block}}
+  @keyframes bob{0%,100%{transform:translate(-50%,0)}50%{transform:translate(-50%,6px)}}
+
+  /* Trust strip */
+  .trust{background:#fff;border-top:1px solid var(--g100);border-bottom:1px solid var(--g100)}
+  .trust-grid{display:grid;grid-template-columns:1fr;gap:0}
+  @media(min-width:768px){.trust-grid{grid-template-columns:repeat(3,1fr)}}
+  .trust-item{display:flex;align-items:center;gap:18px;padding:28px 4px;border-bottom:1px solid var(--g100)}
+  .trust-item:last-child{border-bottom:0}
+  @media(min-width:768px){.trust-item{justify-content:center;padding:40px 16px;border-bottom:0;border-right:1px solid var(--g100)}.trust-item:last-child{border-right:0}}
+  .trust-ico{width:52px;height:52px;border-radius:14px;background:var(--t50);color:var(--t600);display:grid;place-items:center;flex:none}
+  .trust-ico .icon{width:22px;height:22px}
+  .trust-val{font-family:var(--serif);font-size:26px;font-weight:600;line-height:1.1;color:var(--c900)}
+  .trust-lbl{font-size:13.5px;color:var(--c500);margin-top:3px}
+
+  /* About */
+  .about{background:linear-gradient(180deg,#fff,var(--g50))}
+  .about-grid{display:grid;gap:48px;align-items:start}
+  @media(min-width:1024px){.about-grid{grid-template-columns:1fr 1fr;gap:96px;align-items:center}}
+  .about p.lead + p.lead{margin-top:18px}
+  .about-list{display:grid;gap:14px;margin:0;padding:0;list-style:none}
+  .about-list li{display:flex;gap:16px;align-items:flex-start;background:#fff;border:1px solid var(--g100);border-radius:var(--radius);padding:20px 22px;box-shadow:var(--shadow-sm);transition:transform .3s var(--ease),box-shadow .3s var(--ease),border-color .3s}
+  .about-list li:hover{transform:translateX(4px);border-color:var(--t100);box-shadow:var(--shadow)}
+  .about-list .ck{width:30px;height:30px;border-radius:50%;background:var(--t600);color:#fff;display:grid;place-items:center;flex:none;margin-top:1px}
+  .about-list .ck svg{width:15px;height:15px}
+  .about-list strong{display:block;font-weight:600;font-size:15.5px;color:var(--c900)}
+  .about-list span{display:block;font-size:14.5px;color:var(--c500);margin-top:2px;line-height:1.55}
+
+  /* Services */
+  .services{background:#fff}
+  .sec-head{display:flex;flex-direction:column;gap:20px;margin-bottom:56px}
+  @media(min-width:1024px){.sec-head{flex-direction:row;align-items:flex-end;justify-content:space-between;margin-bottom:72px}.sec-head .lead{max-width:440px}}
+  .cards{display:grid;gap:18px;grid-template-columns:1fr}
+  @media(min-width:640px){.cards{grid-template-columns:repeat(2,1fr)}}
+  @media(min-width:1024px){.cards{grid-template-columns:repeat(3,1fr);gap:24px}}
+  .card{position:relative;background:#fff;border:1px solid var(--g100);border-radius:var(--radius);padding:28px 24px 26px;box-shadow:var(--shadow-sm);transition:transform .35s var(--ease),box-shadow .35s var(--ease),border-color .35s;overflow:hidden}
+  .card::before{content:"";position:absolute;left:0;top:0;right:0;height:3px;background:linear-gradient(90deg,var(--t600),var(--t200));transform:scaleX(0);transform-origin:left;transition:transform .45s var(--ease)}
+  .card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg);border-color:var(--t100)}
+  .card:hover::before{transform:scaleX(1)}
+  .card-ico{width:56px;height:56px;border-radius:16px;background:var(--t50);color:var(--t600);display:grid;place-items:center;transition:background-color .35s,color .35s}
+  .card:hover .card-ico{background:var(--t600);color:#fff}
+  .card-ico svg{width:32px;height:32px}
+  .card h3{font-size:22px;margin-top:26px}
+  .card p{font-size:15px;color:var(--c700);margin-top:10px;line-height:1.65}
+  @media(min-width:1024px){.card{padding:34px 30px 32px}}
+  .card .num{position:absolute;right:24px;top:24px;font-family:var(--serif);font-style:italic;font-size:15px;color:var(--c400)}
+  .services-note{margin-top:40px;font-size:14px;color:var(--c500);text-align:center}
+  .services-note a{color:var(--t600);font-weight:500;border-bottom:1px solid var(--t200);transition:border-color .2s}
+  .services-note a:hover{border-color:var(--t600)}
+
+  /* Location */
+  .location{background:var(--g50)}
+  .loc-grid{display:grid;gap:24px}
+  @media(min-width:1024px){.loc-grid{grid-template-columns:.9fr 1.1fr;gap:32px}}
+  .panel{background:#fff;border:1px solid var(--g100);border-radius:20px;box-shadow:var(--shadow-sm);padding:32px 28px}
+  @media(min-width:768px){.panel{padding:40px}}
+  .addr{display:flex;gap:16px;align-items:flex-start}
+  .addr .trust-ico{width:46px;height:46px;border-radius:12px}
+  .addr h3{font-size:20px}
+  .addr p{font-size:15px;color:var(--c700);margin-top:6px;line-height:1.6}
+  .addr-links{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:14px}
+  .addr-links a{display:inline-flex;align-items:center;gap:6px;font-size:14px;font-weight:500;color:var(--t600);transition:color .2s,gap .2s}
+  .addr-links a:hover{color:var(--t800);gap:9px}
+  .addr-links .icon{width:16px;height:16px}
+  .divider{height:1px;background:var(--g100);margin:32px 0}
+  .hours-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:14px}
+  .hours-head h3{font-size:20px}
+  .status{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;font-weight:500;padding:6px 12px;border-radius:999px;background:var(--g50);color:var(--c700);border:1px solid var(--g100)}
+  .status.open{background:#f0fdf4;color:#15803d;border-color:#dcfce7}
+  .hours{list-style:none;margin:0;padding:0}
+  .hours li{display:flex;justify-content:space-between;gap:16px;padding:12px 12px;margin:0 -12px;border-radius:10px;font-size:15px;color:var(--c700);border-bottom:1px dashed var(--g200)}
+  .hours li:last-child{border-bottom:0}
+  
+  .hours li .h{text-align:right;font-variant-numeric:tabular-nums;color:var(--c900)}
+  .hours li.closed .h{color:var(--c400)}
+  .hours li.today{background:var(--t50);border-bottom-color:transparent;font-weight:500}
+  .hours li.today .d{color:var(--t700)}
+  .hours li.today .d::after{content:"hoje";margin-left:8px;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:#fff;background:var(--t600);padding:2px 7px;border-radius:999px;vertical-align:2px;font-weight:600}
+  .map{position:relative;border-radius:20px;overflow:hidden;border:1px solid var(--g100);box-shadow:var(--shadow);min-height:380px;background:var(--g100)}
+  .map iframe{position:absolute;inset:0;width:100%;height:100%;border:0;filter:saturate(.85) contrast(1.02)}
+  @media(min-width:1024px){.map{min-height:100%}}
+
+  /* Final CTA */
+  .cta{background:#fff}
+  .cta-box{position:relative;overflow:hidden;border-radius:28px;padding:64px 28px;text-align:center;background:radial-gradient(120% 140% at 0% 0%,var(--t500) 0%,var(--t700) 45%,var(--t800) 100%);color:#fff;box-shadow:var(--shadow-lg)}
+  @media(min-width:768px){.cta-box{padding:96px 64px}}
+  .cta-box::before,.cta-box::after{content:"";position:absolute;border-radius:50%;border:1px solid rgba(255,255,255,.12);pointer-events:none}
+  .cta-box::before{width:420px;height:420px;right:-140px;top:-180px}
+  .cta-box::after{width:300px;height:300px;left:-120px;bottom:-160px}
+  .cta-box .eyebrow{color:var(--t200)}
+  .cta-box h2{color:#fff;font-size:clamp(32px,5vw,54px);margin:18px auto 0;max-width:760px}
+  .cta-box h2 em{font-style:italic;font-weight:400;color:var(--t200)}
+  .cta-box p{color:rgba(255,255,255,.82);font-size:17px;max-width:560px;margin:20px auto 0;line-height:1.7}
+  .cta-box .btn-wa{margin-top:40px;background:#fff;color:var(--t800);box-shadow:0 18px 40px -12px rgba(0,0,0,.35)}
+  .cta-box .btn-wa svg{color:var(--wa)}
+  .cta-box .btn-wa:hover{background:#f0fdf4}
+  .cta-phone{display:block;margin-top:18px;font-size:14px;color:rgba(255,255,255,.7)}
+  .cta-phone a{color:#fff;border-bottom:1px solid rgba(255,255,255,.3);transition:border-color .2s}
+  .cta-phone a:hover{border-color:#fff}
+  @media(max-width:520px){.cta-box .btn{width:100%;padding:0 18px}}
+
+  /* Footer */
+  .footer{background:var(--c900);color:#c9ced1;padding:72px 0 32px}
+  .foot-grid{display:grid;gap:40px}
+  @media(min-width:768px){.foot-grid{grid-template-columns:1.4fr 1fr 1fr;gap:56px}}
+  .footer .brand-name{color:#fff;font-size:26px}
+  .footer .brand-name span{color:#5eead4}
+  .footer .brand-sub{color:#8b9296}
+  .foot-about{font-size:14.5px;color:#9aa1a6;margin-top:18px;max-width:340px;line-height:1.7}
+  .foot-h{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#fff;font-weight:600;margin-bottom:18px}
+  .foot-list{list-style:none;margin:0;padding:0;display:grid;gap:12px;font-size:14.5px}
+  .foot-list a{color:#c9ced1;transition:color .2s}
+  .foot-list a:hover{color:#5eead4}
+  .foot-list li{display:flex;gap:10px;align-items:flex-start;line-height:1.55}
+  .foot-list .icon{width:17px;height:17px;color:#5eead4;margin-top:2px}
+  .foot-bottom{margin-top:56px;padding-top:24px;border-top:1px solid rgba(255,255,255,.08);display:flex;flex-direction:column;gap:10px;font-size:13px;color:#7c8387}
+  @media(min-width:768px){.foot-bottom{flex-direction:row;justify-content:space-between}}
+
+  /* Floating WA (mobile) */
+  .fab{position:fixed;right:18px;bottom:calc(18px + env(safe-area-inset-bottom));z-index:60;width:60px;height:60px;border-radius:50%;background:#25D366;color:#fff;display:grid;place-items:center;box-shadow:0 12px 28px -8px rgba(22,163,74,.6),0 2px 6px rgba(0,0,0,.12);transform:scale(.6);opacity:0;pointer-events:none;transition:transform .35s var(--ease),opacity .35s var(--ease),background-color .2s}
+  .fab.show{transform:scale(1);opacity:1;pointer-events:auto}
+  .fab:hover{background:var(--wa)}
+  .fab svg{width:30px;height:30px}
+  @media(min-width:960px){.fab{width:62px;height:62px;right:28px;bottom:28px}}
+
+  /* Reveal */
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+  .reveal.in{opacity:1;transform:none}
+  .reveal.d1{transition-delay:.08s}.reveal.d2{transition-delay:.16s}.reveal.d3{transition-delay:.24s}
+  @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}.reveal{opacity:1;transform:none}}
 </style>
 </head>
 <body>
-  <header class="hero">
-    <div class="wrap hero-grid">
-      <div>
-        <span class="badge">Dentista · Campo Grande-MS</span>
-        <h1>DentStar Clínica Odontológica</h1>
-        <p class="lead">Atendimento odontológico em Campo Grande-MS</p>
-        <div class="rating"><span class="stars">★★★★★</span> <strong>5</strong> · 154 avaliações no Google</div>
-        <div class="cta-row">
-          <a class="cta" href="https://wa.me/5567991302502?text=Olá! Vim pelo site e gostaria de mais informações." target="_blank" rel="noopener">Agendar pelo WhatsApp</a>
-          <a class="cta secondary" href="#mapa">Ver localização</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.08 1.76-.72 2.01-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35M12.05 21.5h-.01a9.4 9.4 0 0 1-4.8-1.31l-.34-.2-3.57.93.95-3.48-.22-.36a9.41 9.41 0 0 1-1.44-5.02c0-5.2 4.23-9.43 9.44-9.43 2.52 0 4.89.98 6.67 2.77a9.37 9.37 0 0 1 2.76 6.67c0 5.2-4.24 9.43-9.44 9.43m8.03-17.46A11.27 11.27 0 0 0 12.05.72C5.79.72.7 5.81.7 12.07c0 2 .52 3.95 1.52 5.67L.6 23.6l6-1.57a11.33 11.33 0 0 0 5.43 1.38h.01c6.25 0 11.35-5.09 11.35-11.35 0-3.03-1.18-5.88-3.32-8.02"/></symbol>
+    <symbol id="i-star" viewBox="0 0 20 20"><path fill="currentColor" d="M10 1.5l2.6 5.5 6 .7-4.45 4.1 1.2 5.95L10 14.8l-5.35 2.95 1.2-5.95L1.4 7.7l6-.7z"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></g></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></g></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" d="M5 4h3.5l1.5 4.5-2 1.5a11 11 0 0 0 6 6l1.5-2 4.5 1.5V19a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M9 7h8v8"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+    <symbol id="i-google" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.27-4.74 3.27-8.1z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84A11 11 0 0 0 12 23z"/><path fill="#FBBC05" d="M5.84 14.1A6.6 6.6 0 0 1 5.5 12c0-.73.13-1.44.34-2.1V7.06H2.18A11 11 0 0 0 1 12c0 1.78.43 3.45 1.18 4.94l3.66-2.84z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15A10.96 10.96 0 0 0 12 1 11 11 0 0 0 2.18 7.06l3.66 2.84C6.71 7.31 9.14 5.38 12 5.38z"/></symbol>
+    <!-- Tooth -->
+    <symbol id="s-tooth" viewBox="0 0 32 32"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" stroke-linecap="round" d="M16 7.2c-2-1.6-4.3-2.2-6.4-1.7-3.2.8-4.6 4-4 7.6.4 2.4 1.4 4.2 2 6.6.6 2.6.8 7.3 3 7.3 2 0 2.1-4.5 2.9-6.6.4-1.1 1.4-1.6 2.5-1.6s2.1.5 2.5 1.6c.8 2.1.9 6.6 2.9 6.6 2.2 0 2.4-4.7 3-7.3.6-2.4 1.6-4.2 2-6.6.6-3.6-.8-6.8-4-7.6-2.1-.5-4.4.1-6.4 1.7z"/><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" d="M13 9.2c1 .5 2 .8 3 .8"/></symbol>
+    <!-- Implant -->
+    <symbol id="s-implant" viewBox="0 0 32 32"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M10 4.5h12c1.5 0 2.5 1.3 2.2 2.8l-.6 3.2c-.3 1.2-1.3 2-2.5 2h-10.2c-1.2 0-2.2-.8-2.5-2l-.6-3.2C7.5 5.8 8.5 4.5 10 4.5z"/><path d="M12 12.5h8"/><path d="M12.5 16h7M13 19.5h6M13.5 23h5M14.5 26.5h3"/><path d="M12 12.5l2.5 16h3l2.5-16"/></g></symbol>
+    <!-- Ortho / braces -->
+    <symbol id="s-ortho" viewBox="0 0 32 32"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11.5c3 6 7.2 9 12 9s9-3 12-9"/><path d="M5.2 14.2c3.3 2.4 7 3.6 10.8 3.6s7.5-1.2 10.8-3.6"/><rect x="7.4" y="13.4" width="3.6" height="3.6" rx=".9" fill="currentColor" fill-opacity=".15"/><rect x="14.2" y="15.6" width="3.6" height="3.6" rx=".9" fill="currentColor" fill-opacity=".15"/><rect x="21" y="13.4" width="3.6" height="3.6" rx=".9" fill="currentColor" fill-opacity=".15"/></g></symbol>
+    <!-- Root canal -->
+    <symbol id="s-root" viewBox="0 0 32 32"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M16 6.2c-2-1.5-4.2-2-6.2-1.5-3 .8-4.3 3.8-3.7 7.2.4 2.2 1.3 3.9 1.9 6.1.6 2.4.8 6.9 2.9 6.9 1.9 0 2-4.2 2.8-6.2.4-1 1.3-1.5 2.3-1.5s1.9.5 2.3 1.5c.8 2 .9 6.2 2.8 6.2 2.1 0 2.3-4.5 2.9-6.9.6-2.2 1.5-3.9 1.9-6.1.6-3.4-.7-6.4-3.7-7.2-2-.5-4.2 0-6.2 1.5z"/><path d="M12.2 10.5c.6 3 .4 6 -.5 9.6M19.8 10.5c-.6 3-.4 6 .5 9.6" stroke-dasharray="1.6 2.2"/></g></symbol>
+    <!-- Kids -->
+    <symbol id="s-kids" viewBox="0 0 32 32"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="16" cy="16" r="11"/><path d="M11.5 18.5c1.2 1.8 2.8 2.7 4.5 2.7s3.3-.9 4.5-2.7"/><circle cx="12" cy="13.5" r=".6" fill="currentColor"/><circle cx="20" cy="13.5" r=".6" fill="currentColor"/><path d="M14 5.4c.8 1.4 2.4 1.8 3.6.9"/></g></symbol>
+    <!-- Gum / perio -->
+    <symbol id="s-perio" viewBox="0 0 32 32"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 10.5c2 2.6 4 3.5 6 3.5s2.6-1.6 3.4-1.6 1.6 1.6 3.1 1.6 2.3-1.6 3.1-1.6 1.4 1.6 3.4 1.6 4-.9 6-3.5"/><path d="M9 14v6.5c0 2.2 1.1 3.5 2.5 3.5s2-1.4 2-3.4V13M18.5 13v7.6c0 2 .6 3.4 2 3.4S23 22.7 23 20.5V14"/></g></symbol>
+    <!-- Shield/prevention -->
+    <symbol id="s-shield" viewBox="0 0 32 32"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M16 3.8l9.5 3.6v7.4c0 6.1-4 10.9-9.5 13.4-5.5-2.5-9.5-7.3-9.5-13.4V7.4z"/><path d="M11.5 16l3.2 3.2 6-6.4"/></g></symbol>
+  </defs>
+</svg>
+
+<!-- Header -->
+<header class="header" id="top">
+  <div class="container">
+    <a href="#inicio" class="brand" aria-label="DentStar Clínica Odontológica — início">
+      <span class="brand-name">Dent<span>Star</span></span>
+      <span class="brand-sub">Clínica Odontológica</span>
+    </a>
+    <nav class="nav" aria-label="Principal">
+      <a class="link" href="#sobre">Sobre</a>
+      <a class="link" href="#servicos">Tratamentos</a>
+      <a class="link" href="#localizacao">Localização</a>
+      <a class="link" href="#localizacao">Horários</a>
+      <a class="btn btn-wa" href="https://wa.me/5567991302502?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20na%20DentStar." target="_blank" rel="noopener">
+        <svg class="icon" viewBox="0 0 24 24" style="width:18px;height:18px"><use href="#i-wa"/></svg>Agendar
+      </a>
+    </nav>
+    <button class="menu-btn" id="menuBtn" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobileNav">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path id="mb1" d="M4 7h16"/><path id="mb2" d="M4 12h16"/><path id="mb3" d="M4 17h16"/></svg>
+    </button>
+  </div>
+</header>
+<div class="mobile-nav" id="mobileNav">
+  <a class="link" href="#sobre">Sobre</a>
+  <a class="link" href="#servicos">Tratamentos</a>
+  <a class="link" href="#localizacao">Localização e horários</a>
+  <a class="btn btn-wa" href="https://wa.me/5567991302502?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20na%20DentStar." target="_blank" rel="noopener">
+    <svg class="icon" viewBox="0 0 24 24"><use href="#i-wa"/></svg>Agendar pelo WhatsApp
+  </a>
+</div>
+
+<main>
+<!-- Hero -->
+<section class="hero" id="inicio">
+  <div class="container hero-grid">
+    <div>
+      <a class="rating-pill reveal" href="https://www.google.com/maps/search/?api=1&amp;query=DentStar%20Cl%C3%ADnica%20Odontol%C3%B3gica%20-%20Dentista%20-%20Campo%20Grande%20-%20MS&amp;query_place_id=ChIJzznGPaDphpQRv8QtHmXDH0I" target="_blank" rel="noopener" aria-label="Nota 5,0 no Google com 154 avaliações">
+        <span class="g"><svg width="14" height="14" viewBox="0 0 24 24"><use href="#i-google"/></svg></span>
+        <span class="stars" aria-hidden="true"><svg viewBox="0 0 20 20"><use href="#i-star"/></svg><svg viewBox="0 0 20 20"><use href="#i-star"/></svg><svg viewBox="0 0 20 20"><use href="#i-star"/></svg><svg viewBox="0 0 20 20"><use href="#i-star"/></svg><svg viewBox="0 0 20 20"><use href="#i-star"/></svg></span>
+        <span><strong>5,0</strong> · 154 avaliações</span>
+      </a>
+      <h1 class="reveal d1">Cuidado odontológico <em>completo</em>, perto de você.</h1>
+      <p class="lead reveal d2">Da clínica geral aos implantes, ortodontia e odontopediatria — atendimento para toda a família no bairro Tiradentes, em Campo Grande.</p>
+      <div class="hero-ctas reveal d3">
+        <a class="btn btn-wa btn-lg" href="https://wa.me/5567991302502?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20na%20DentStar." target="_blank" rel="noopener">
+          <svg class="icon" viewBox="0 0 24 24"><use href="#i-wa"/></svg>Agendar pelo WhatsApp
+        </a>
+        <a class="btn btn-ghost btn-lg" href="#localizacao">
+          <svg class="icon" viewBox="0 0 24 24"><use href="#i-pin"/></svg>Ver localização
+        </a>
+      </div>
+      <div class="hero-meta reveal d3">
+        <span><svg class="icon" viewBox="0 0 24 24"><use href="#i-pin"/></svg>R. Marquês de Pombal, 1131 · Tiradentes</span>
+        <span><svg class="icon" viewBox="0 0 24 24"><use href="#i-clock"/></svg>Seg a sáb</span>
+      </div>
+    </div>
+
+    <div class="hero-visual reveal d2">
+      <div class="photo-accent" aria-hidden="true"></div>
+      <div class="photo-frame">
+        <img id="heroImg"
+             src="https://lh3.googleusercontent.com/grass-cs/AABkmLfe6n-BRa_DboHhXO7TPZ4aAn5cRySyMCfOrDmYYZ4bfjQH9LS8G-hVh9MntCN9HuLPNWKaSG9LIozB9WNaBCjxuHBfeMUqWEfT6vsceQe5xlh8-l6QkuccTMSjEh0w3V6T2HK0=w816-h1086-k-no"
+             data-fallback="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&amp;fit=crop&amp;w=900&amp;q=80"
+             alt="DentStar Clínica Odontológica em Campo Grande - MS"
+             width="408" height="543" referrerpolicy="no-referrer" fetchpriority="high">
+      </div>
+      <div class="float-card float-rating">
+        <span class="num">5,0</span>
+        <div>
+          <span class="stars" aria-hidden="true"><svg viewBox="0 0 20 20"><use href="#i-star"/></svg><svg viewBox="0 0 20 20"><use href="#i-star"/></svg><svg viewBox="0 0 20 20"><use href="#i-star"/></svg><svg viewBox="0 0 20 20"><use href="#i-star"/></svg><svg viewBox="0 0 20 20"><use href="#i-star"/></svg></span>
+          <small>154 avaliações no Google</small>
         </div>
       </div>
-      <figure class="photo">
-        <img src="https://lh3.googleusercontent.com/grass-cs/AABkmLfe6n-BRa_DboHhXO7TPZ4aAn5cRySyMCfOrDmYYZ4bfjQH9LS8G-hVh9MntCN9HuLPNWKaSG9LIozB9WNaBCjxuHBfeMUqWEfT6vsceQe5xlh8-l6QkuccTMSjEh0w3V6T2HK0=w408-h543-k-no" alt="Foto pública do Google Maps — DentStar Clínica Odontológica" loading="lazy" referrerpolicy="no-referrer">
-        <figcaption class="photo-cap">Imagem pública do Google Maps (somente demonstração)</figcaption>
-      </figure>
-    </div>
-  </header>
-
-  <section class="section">
-    <div class="wrap grid2">
-      <div class="card">
-        <h2>Sobre</h2>
-        <p class="muted">Espaço dedicado ao cuidado com o seu sorriso. Entre em contato pelo WhatsApp para tirar dúvidas ou agendar.</p>
-        <p style="margin-top:1rem"><strong>Endereço</strong><br><span class="muted">R. Marquês de Pombal, 1131 - Sl 02 - Tiradentes, Campo Grande - MS, 79041-080, Brasil</span></p>
-        <p style='margin-top:.7rem'><strong>Telefone</strong><br><span class='muted'>+55 67 99130-2502</span></p>
-      </div>
-      <div class="card">
-        <h2>Serviços (genéricos da categoria)</h2>
-        <ul class="services"><li>Consulta e avaliação</li><li>Limpeza e prevenção</li><li>Clareamento dental</li><li>Atendimento de urgência</li></ul>
-        <p class="note">Lista ilustrativa da categoria — não são serviços confirmados deste estabelecimento.</p>
+      <div class="float-card float-status" id="heroStatus" hidden>
+        <span class="dot" id="heroDot"></span><span id="heroStatusText"></span>
       </div>
     </div>
-  </section>
+  </div>
+  <svg class="scroll-cue" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M12 4v16M6 14l6 6 6-6"/></svg>
+</section>
 
-  <section class="section">
-    <div class="wrap grid2">
-      <div class="card">
-        <h2>Horários</h2>
-        <ul class="hours"><li><span>quinta-feira</span><span>08:00 to 11:00, 13:00 to 18:00</span></li><li><span>sexta-feira</span><span>08:00 to 11:00, 13:00 to 18:00</span></li><li><span>sábado</span><span>08:00 to 12:00</span></li><li><span>domingo</span><span>Fechado</span></li><li><span>segunda-feira</span><span>08:00 to 11:00, 13:00 to 18:00</span></li><li><span>terça-feira</span><span>08:00 to 11:00, 13:00 to 18:00</span></li><li><span>quarta-feira</span><span>08:00 to 11:00, 13:00 to 18:00</span></li></ul>
+<!-- Trust strip -->
+<section class="trust" aria-label="Destaques">
+  <div class="container trust-grid">
+    <div class="trust-item reveal">
+      <div class="trust-ico"><svg class="icon" viewBox="0 0 20 20"><use href="#i-star"/></svg></div>
+      <div><div class="trust-val">5,0 <span style="color:var(--gold);font-size:20px">★★★★★</span></div><div class="trust-lbl">Nota média no Google</div></div>
+    </div>
+    <div class="trust-item reveal d1">
+      <div class="trust-ico"><svg class="icon" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></svg></div>
+      <div><div class="trust-val">154</div><div class="trust-lbl">Avaliações de pacientes</div></div>
+    </div>
+    <div class="trust-item reveal d2">
+      <div class="trust-ico"><svg class="icon" viewBox="0 0 24 24"><use href="#i-pin"/></svg></div>
+      <div><div class="trust-val">Tiradentes</div><div class="trust-lbl">Campo Grande · MS</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- Sobre -->
+<section class="section about" id="sobre">
+  <div class="container about-grid">
+    <div class="reveal">
+      <span class="eyebrow">Sobre a clínica</span>
+      <h2 class="h2">Um lugar para cuidar do seu sorriso <em>com calma</em>.</h2>
+      <p class="lead" style="margin-top:24px">A DentStar Clínica Odontológica atende no bairro Tiradentes, em Campo Grande, reunindo diferentes áreas da odontologia em um só endereço — da rotina de prevenção a tratamentos mais específicos.</p>
+      <p class="lead">A confiança de quem já passou por aqui aparece nos números: nota 5,0 no Google, com 154 avaliações. Para tirar dúvidas ou marcar um horário, basta chamar no WhatsApp.</p>
+    </div>
+    <ul class="about-list">
+      <li class="reveal d1">
+        <span class="ck"><svg viewBox="0 0 24 24"><use href="#i-check"/></svg></span>
+        <div><strong>Várias especialidades, um só endereço</strong><span>Clínica geral, implantes, ortodontia, endodontia, odontopediatria e periodontia.</span></div>
+      </li>
+      <li class="reveal d2">
+        <span class="ck"><svg viewBox="0 0 24 24"><use href="#i-check"/></svg></span>
+        <div><strong>Atendimento de segunda a sábado</strong><span>Seg a sex, 08:00–11:00 e 13:00–18:00 · Sáb, 08:00–12:00.</span></div>
+      </li>
+      <li class="reveal d3">
+        <span class="ck"><svg viewBox="0 0 24 24"><use href="#i-check"/></svg></span>
+        <div><strong>Agendamento simples</strong><span>Fale direto com a clínica pelo WhatsApp (67) 99130-2502.</span></div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- Serviços -->
+<section class="section services" id="servicos">
+  <div class="container">
+    <div class="sec-head">
+      <div class="reveal">
+        <span class="eyebrow">Tratamentos</span>
+        <h2 class="h2">Áreas de <em>atendimento</em></h2>
       </div>
-      <div class="card" id="mapa">
-        <h2>Como chegar</h2>
-        <div class="map"><iframe title="Mapa" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-          src="https://maps.google.com/maps?q=-20.4706101,-54.5731277&z=15&output=embed"></iframe></div>
-        <p style='margin-top:.7rem'><a href='https://www.google.com/maps/search/?api=1&amp;query=DentStar%20Cl%C3%ADnica%20Odontol%C3%B3gica%20-%20Dentista%20-%20Campo%20Grande%20-%20MS&amp;query_place_id=ChIJzznGPaDphpQRv8QtHmXDH0I' target='_blank' rel='noopener'>Abrir no Google Maps</a></p>
+      <p class="lead reveal d1">Cuidado para diferentes fases e necessidades — de crianças a adultos. Consulte a clínica para saber qual tratamento é indicado para você.</p>
+    </div>
+
+    <div class="cards">
+      <article class="card reveal">
+        <span class="num">01</span>
+        <div class="card-ico"><svg viewBox="0 0 32 32"><use href="#s-tooth"/></svg></div>
+        <h3>Clínica geral</h3>
+        <p>Consultas de rotina, avaliação e acompanhamento da saúde bucal como ponto de partida para qualquer tratamento.</p>
+      </article>
+      <article class="card reveal d1">
+        <span class="num">02</span>
+        <div class="card-ico"><svg viewBox="0 0 32 32"><use href="#s-implant"/></svg></div>
+        <h3>Implantes dentários</h3>
+        <p>Reposição de dentes perdidos com implantes, devolvendo função e naturalidade ao sorriso.</p>
+      </article>
+      <article class="card reveal d2">
+        <span class="num">03</span>
+        <div class="card-ico"><svg viewBox="0 0 32 32"><use href="#s-ortho"/></svg></div>
+        <h3>Ortodontia</h3>
+        <p>Correção do alinhamento dos dentes e da mordida, com acompanhamento ao longo de todo o tratamento.</p>
+      </article>
+      <article class="card reveal">
+        <span class="num">04</span>
+        <div class="card-ico"><svg viewBox="0 0 32 32"><use href="#s-root"/></svg></div>
+        <h3>Endodontia <span style="font-style:italic;font-weight:400;color:var(--c500);font-size:.8em">(canal)</span></h3>
+        <p>Tratamento de canal para preservar o dente natural quando a polpa está comprometida.</p>
+      </article>
+      <article class="card reveal d1">
+        <span class="num">05</span>
+        <div class="card-ico"><svg viewBox="0 0 32 32"><use href="#s-kids"/></svg></div>
+        <h3>Odontopediatria</h3>
+        <p>Atendimento dedicado às crianças, com cuidado e paciência desde os primeiros dentinhos.</p>
+      </article>
+      <article class="card reveal d2">
+        <span class="num">06</span>
+        <div class="card-ico"><svg viewBox="0 0 32 32"><use href="#s-perio"/></svg></div>
+        <h3>Periodontia</h3>
+        <p>Cuidado com a gengiva e as estruturas de suporte dos dentes, fundamentais para a saúde bucal.</p>
+      </article>
+    </div>
+    <p class="services-note reveal">Também realizamos <strong style="color:var(--c900);font-weight:500">limpeza e prevenção</strong>. <a href="https://wa.me/5567991302502?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20tratamentos%20da%20DentStar." target="_blank" rel="noopener">Tire suas dúvidas pelo WhatsApp</a></p>
+  </div>
+</section>
+
+<!-- Localização & Horários -->
+<section class="section location" id="localizacao">
+  <div class="container">
+    <div class="sec-head">
+      <div class="reveal">
+        <span class="eyebrow">Localização &amp; horários</span>
+        <h2 class="h2">Venha nos <em>visitar</em></h2>
+      </div>
+      <p class="lead reveal d1">Estamos na Rua Marquês de Pombal, no bairro Tiradentes. Confira os horários de atendimento antes da sua visita.</p>
+    </div>
+
+    <div class="loc-grid">
+      <div class="panel reveal">
+        <div class="addr">
+          <div class="trust-ico"><svg class="icon" viewBox="0 0 24 24"><use href="#i-pin"/></svg></div>
+          <div>
+            <h3>Endereço</h3>
+            <p>R. Marquês de Pombal, 1131 - Sl 02<br>Tiradentes, Campo Grande - MS<br>CEP 79041-080</p>
+            <div class="addr-links">
+              <a href="https://www.google.com/maps/search/?api=1&amp;query=DentStar%20Cl%C3%ADnica%20Odontol%C3%B3gica%20-%20Dentista%20-%20Campo%20Grande%20-%20MS&amp;query_place_id=ChIJzznGPaDphpQRv8QtHmXDH0I" target="_blank" rel="noopener">Abrir no Google Maps <svg class="icon" viewBox="0 0 24 24"><use href="#i-arrow"/></svg></a>
+              <a href="https://www.google.com/maps/dir/?api=1&amp;destination=-20.4706101,-54.5731277&amp;destination_place_id=ChIJzznGPaDphpQRv8QtHmXDH0I" target="_blank" rel="noopener">Como chegar <svg class="icon" viewBox="0 0 24 24"><use href="#i-arrow"/></svg></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="hours-head">
+          <h3>Horários</h3>
+          <span class="status" id="statusBadge" hidden><span class="dot" id="statusDot"></span><span id="statusText"></span></span>
+        </div>
+        <ul class="hours" id="hours">
+          <li data-day="1"><span class="d">Segunda-feira</span><span class="h">08:00–11:00 · 13:00–18:00</span></li>
+          <li data-day="2"><span class="d">Terça-feira</span><span class="h">08:00–11:00 · 13:00–18:00</span></li>
+          <li data-day="3"><span class="d">Quarta-feira</span><span class="h">08:00–11:00 · 13:00–18:00</span></li>
+          <li data-day="4"><span class="d">Quinta-feira</span><span class="h">08:00–11:00 · 13:00–18:00</span></li>
+          <li data-day="5"><span class="d">Sexta-feira</span><span class="h">08:00–11:00 · 13:00–18:00</span></li>
+          <li data-day="6"><span class="d">Sábado</span><span class="h">08:00–12:00</span></li>
+          <li data-day="0" class="closed"><span class="d">Domingo</span><span class="h">Fechado</span></li>
+        </ul>
+
+        <div class="divider"></div>
+
+        <div class="addr">
+          <div class="trust-ico"><svg class="icon" viewBox="0 0 24 24"><use href="#i-phone"/></svg></div>
+          <div>
+            <h3>Contato</h3>
+            <p><a href="tel:+5567991302502" style="border-bottom:1px solid var(--g200)">+55 67 99130-2502</a></p>
+            <div class="addr-links">
+              <a href="https://wa.me/5567991302502?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20na%20DentStar." target="_blank" rel="noopener">Chamar no WhatsApp <svg class="icon" viewBox="0 0 24 24"><use href="#i-arrow"/></svg></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="map reveal d1">
+        <iframe src="https://www.google.com/maps?q=-20.4706101,-54.5731277&amp;z=16&amp;output=embed" title="Mapa — DentStar Clínica Odontológica, R. Marquês de Pombal, 1131, Campo Grande - MS" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="section">
-    <div class="wrap card" style="text-align:center">
-      <h2>Pronto para falar conosco?</h2>
-      <p class="muted">Resposta rápida pelo WhatsApp.</p>
-      <p style="margin-top:1rem"><a class="cta" href="https://wa.me/5567991302502?text=Olá! Vim pelo site e gostaria de mais informações." target="_blank" rel="noopener">Agendar pelo WhatsApp</a></p>
+<!-- CTA final -->
+<section class="section cta" aria-label="Agendar consulta">
+  <div class="container">
+    <div class="cta-box reveal">
+      <span class="eyebrow">Agende sua consulta</span>
+      <h2>Seu próximo sorriso começa com <em>uma mensagem</em>.</h2>
+      <p>Fale com a DentStar pelo WhatsApp, tire suas dúvidas e encontre o melhor horário para você.</p>
+      <a class="btn btn-wa btn-lg" href="https://wa.me/5567991302502?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20na%20DentStar." target="_blank" rel="noopener">
+        <svg class="icon" viewBox="0 0 24 24" style="width:24px;height:24px"><use href="#i-wa"/></svg>Conversar no WhatsApp
+      </a>
+      <span class="cta-phone">ou ligue: <a href="tel:+5567991302502">(67) 99130-2502</a></span>
     </div>
-  </section>
+  </div>
+</section>
+</main>
 
-  <footer class="footer">
-    <div class="wrap">
-      <p>DentStar Clínica Odontológica · Campo Grande, MS</p>
-      <p class="note">Demonstração estática gerada a partir de dados públicos do Google Maps para preview comercial. Não é o site oficial do estabelecimento. Nenhuma avaliação ou depoimento foi inventado.</p>
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <div class="brand">
+          <span class="brand-name">Dent<span>Star</span></span>
+          <span class="brand-sub">Clínica Odontológica</span>
+        </div>
+        <p class="foot-about">Dentista no bairro Tiradentes, Campo Grande - MS. Clínica geral, implantes, ortodontia, endodontia, odontopediatria e periodontia.</p>
+      </div>
+      <div>
+        <div class="foot-h">Contato</div>
+        <ul class="foot-list">
+          <li><svg class="icon" viewBox="0 0 24 24"><use href="#i-wa"/></svg><a href="https://wa.me/5567991302502" target="_blank" rel="noopener">WhatsApp</a></li>
+          <li><svg class="icon" viewBox="0 0 24 24"><use href="#i-phone"/></svg><a href="tel:+5567991302502">+55 67 99130-2502</a></li>
+          <li><svg class="icon" viewBox="0 0 24 24"><use href="#i-pin"/></svg><a href="https://www.google.com/maps/search/?api=1&amp;query=DentStar%20Cl%C3%ADnica%20Odontol%C3%B3gica%20-%20Dentista%20-%20Campo%20Grande%20-%20MS&amp;query_place_id=ChIJzznGPaDphpQRv8QtHmXDH0I" target="_blank" rel="noopener">R. Marquês de Pombal, 1131 - Sl 02<br>Tiradentes, Campo Grande - MS<br>79041-080</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="foot-h">Horários</div>
+        <ul class="foot-list">
+          <li><svg class="icon" viewBox="0 0 24 24"><use href="#i-clock"/></svg><span>Seg a sex<br>08:00–11:00 · 13:00–18:00</span></li>
+          <li><svg class="icon" viewBox="0 0 24 24"><use href="#i-clock"/></svg><span>Sábado<br>08:00–12:00</span></li>
+          <li><svg class="icon" viewBox="0 0 24 24"><use href="#i-clock"/></svg><span>Domingo<br>Fechado</span></li>
+        </ul>
+      </div>
     </div>
-  </footer>
+    <div class="foot-bottom">
+      <span>© <span id="year">2026</span> DentStar Clínica Odontológica · Campo Grande - MS</span>
+      <span>Prévia criada para DentStar Clínica Odontológica</span>
+    </div>
+  </div>
+</footer>
 
-  <div class="float-wa"><a href="https://wa.me/5567991302502?text=Olá! Vim pelo site e gostaria de mais informações." target="_blank" rel="noopener">WhatsApp</a></div>
+<a class="fab" id="fab" href="https://wa.me/5567991302502?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20na%20DentStar." target="_blank" rel="noopener" aria-label="Agendar pelo WhatsApp">
+  <svg viewBox="0 0 24 24"><use href="#i-wa"/></svg>
+</a>
+
+<script>
+(function(){
+  // Hero image fallback chain: Google photo → Unsplash → soft gradient
+  var img=document.getElementById('heroImg');
+  img.addEventListener('error',function onErr(){
+    if(img.dataset.fallback && img.src!==img.dataset.fallback){img.src=img.dataset.fallback;}
+    else{img.removeEventListener('error',onErr);img.style.display='none';}
+  });
+
+  // Header + FAB on scroll
+  var header=document.querySelector('.header'),fab=document.getElementById('fab');
+  function onScroll(){
+    var y=window.scrollY;
+    header.classList.toggle('scrolled',y>20);
+    fab.classList.toggle('show',y>window.innerHeight*0.6);
+  }
+  onScroll();window.addEventListener('scroll',onScroll,{passive:true});
+
+  // Mobile menu
+  var btn=document.getElementById('menuBtn'),menu=document.getElementById('mobileNav');
+  function setMenu(open){
+    menu.classList.toggle('open',open);btn.setAttribute('aria-expanded',open);
+    btn.setAttribute('aria-label',open?'Fechar menu':'Abrir menu');
+    document.getElementById('mb1').setAttribute('d',open?'M6 6l12 12':'M4 7h16');
+    document.getElementById('mb2').style.opacity=open?0:1;
+    document.getElementById('mb3').setAttribute('d',open?'M6 18L18 6':'M4 17h16');
+    if(open)header.classList.add('scrolled');else onScroll();
+  }
+  btn.addEventListener('click',function(){setMenu(!menu.classList.contains('open'))});
+  menu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){setMenu(false)})});
+
+  // Reveal on scroll
+  var els=document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+    els.forEach(function(el){io.observe(el)});
+  }else{els.forEach(function(el){el.classList.add('in')});}
+
+  // Open/closed status from real hours (Campo Grande time)
+  var H={0:[],1:[[480,660],[780,1080]],2:[[480,660],[780,1080]],3:[[480,660],[780,1080]],4:[[480,660],[780,1080]],5:[[480,660],[780,1080]],6:[[480,720]]};
+  try{
+    var parts=new Intl.DateTimeFormat('en-US',{timeZone:'America/Campo_Grande',weekday:'short',hour:'2-digit',minute:'2-digit',hourCycle:'h23'}).formatToParts(new Date());
+    var p={};parts.forEach(function(x){p[x.type]=x.value});
+    var day=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].indexOf(p.weekday);
+    var mins=parseInt(p.hour,10)*60+parseInt(p.minute,10);
+    var open=H[day].some(function(r){return mins>=r[0]&&mins<r[1]});
+    var li=document.querySelector('#hours li[data-day="'+day+'"]');if(li)li.classList.add('today');
+    var label=open?'Aberto agora':'Fechado agora';
+    var sb=document.getElementById('statusBadge');sb.hidden=false;sb.classList.toggle('open',open);
+    document.getElementById('statusText').textContent=label;
+    document.getElementById('statusDot').classList.toggle('on',open);
+    var hs=document.getElementById('heroStatus');hs.hidden=false;
+    document.getElementById('heroStatusText').textContent=label;
+    document.getElementById('heroDot').classList.toggle('on',open);
+  }catch(e){}
+
+  document.getElementById('year').textContent=new Date().getFullYear();
+})();
+</script>
 </body>
 </html>
